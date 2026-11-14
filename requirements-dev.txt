@@ -1,0 +1,2 @@
+# Runtime dependencies are supplied by ComfyUI; this file is for isolated tests.
+aiohttp>=3.11,<4

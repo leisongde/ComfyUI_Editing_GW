@@ -1,0 +1,35 @@
+__pycache__/
+*.py[cod]
+output/
+/OPEN_SOURCE_REVIEW.md
+
+# Local credentials and configuration
+.env
+.env.*
+!.env.example
+!.env.template
+*.pem
+*.key
+credentials*.json
+secrets*.json
+
+# Development environments and generated files
+.venv/
+venv/
+node_modules/
+.comfyui-test/
+.pytest_cache/
+.mypy_cache/
+.ruff_cache/
+.coverage
+htmlcov/
+coverage/
+*.log
+*.part
+.playwright-cli/
+playwright-report/
+test-results/
+.idea/
+.vscode/
+.DS_Store
+Thumbs.db

@@ -1,0 +1,18 @@
+* text=auto
+*.py text eol=lf
+*.js text eol=lf
+*.mjs text eol=lf
+*.css text eol=lf
+*.md text eol=lf
+*.yml text eol=lf
+
+# Exclude local artifacts from git archive if accidentally tracked.
+output/** export-ignore
+**/__pycache__/** export-ignore
+.venv/** export-ignore
+.comfyui-test/** export-ignore
+.env export-ignore
+.env.* export-ignore
+*.key export-ignore
+*.pem export-ignore
+OPEN_SOURCE_REVIEW.md export-ignore

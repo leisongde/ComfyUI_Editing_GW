@@ -1,0 +1,46 @@
+.gw-model-dialog {
+    width: min(1400px, 94vw);
+    max-height: 88vh;
+    padding: 0;
+    border: 1px solid var(--border-color, #505563);
+    border-radius: 12px;
+    background: var(--comfy-menu-bg, #20232b);
+    color: var(--input-text, #edf0f7);
+    font: 14px/1.5 system-ui, sans-serif;
+    box-shadow: 0 24px 90px #0008;
+}
+.gw-model-dialog::backdrop { background: #0009; }
+.gw-model-dialog header { display: flex; justify-content: space-between; align-items: center; padding: 16px 20px; border-bottom: 1px solid #ffffff24; }
+.gw-content { padding: 20px; overflow: auto; max-height: 74vh; }
+.gw-model-dialog button { padding: 7px 13px; border: 1px solid #ffffff38; border-radius: 6px; background: var(--comfy-input-bg, #303642); color: inherit; cursor: pointer; white-space: nowrap; }
+.gw-model-dialog button:hover { border-color: #8ba8ff; }
+.gw-model-dialog button:disabled { opacity: .5; cursor: default; }
+.gw-toolbar { display: flex; gap: 8px; margin: 16px 0; flex-wrap: wrap; }
+.gw-auto { display: flex; align-items: center; gap: 8px; }
+.gw-import { margin: 16px 0; }
+.gw-import summary { color: #a8baf0; cursor: pointer; }
+.gw-import-fields { display: flex; gap: 8px; flex-wrap: wrap; }
+.gw-import-fields input, .gw-import-fields select { min-width: 180px; padding: 7px; border: 1px solid #ffffff2b; border-radius: 5px; background: var(--comfy-input-bg, #151921); color: inherit; }
+.gw-import-fields input { flex: 1; }
+.gw-message, .gw-error { white-space: pre-wrap; overflow-wrap: anywhere; font: inherit; }
+.gw-message { color: #b4bed0; }
+.gw-error { color: #ffaaaa; }
+.gw-table-scroll { overflow: auto; }
+.gw-model-table { width: 100%; min-width: 1000px; border-collapse: collapse; }
+.gw-model-table th, .gw-model-table td { text-align: left; padding: 11px 8px; border-bottom: 1px solid #ffffff18; vertical-align: top; }
+.gw-model-table th { color: #b8c4d9; }
+.gw-model-table td:nth-child(2) { width: 29%; }
+.gw-model-table td:nth-child(3) { width: 15%; }
+.gw-model-table td:nth-child(4) { width: 27%; }
+.gw-model-table input:not([type=checkbox]), .gw-model-table select { box-sizing: border-box; width: 100%; padding: 7px; border: 1px solid #ffffff2b; border-radius: 5px; background: var(--comfy-input-bg, #151921); color: inherit; }
+.gw-model-table input[readonly], .gw-model-table select:disabled { opacity: .75; }
+.gw-model-table .gw-root { margin-top: 8px; max-width: 190px; }
+.gw-model-table small { display: block; color: #99a6bc; overflow-wrap: anywhere; margin-top: 6px; }
+.gw-model-table details { margin-top: 8px; }
+.gw-model-table details input { margin-top: 7px; }
+.gw-model-table summary { color: #a8baf0; cursor: pointer; }
+.gw-path { max-width: 220px; }
+.gw-unused { opacity: .55; }
+.gw-progress-list { display: grid; gap: 14px; margin: 18px 0; }
+.gw-progress-file { border: 1px solid #ffffff20; border-radius: 7px; padding: 12px; overflow-wrap: anywhere; }
+.gw-progress-file progress { width: 100%; height: 14px; margin-top: 8px; accent-color: #8daaff; }
