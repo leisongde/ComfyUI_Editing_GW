@@ -179,6 +179,10 @@ node --experimental-vm-modules tests/test_frontend.mjs
 
 详细设计见 [DESIGN.md](DESIGN.md)。
 
+## 维护者发布
+
+本项目的 ComfyUI Registry 发布元数据位于 `pyproject.toml`，节点包 ID 为 `editing-gw`，Publisher ID 为 `leisongde`。配置 GitHub 仓库 Secret 后，可在 Actions 手动运行 **Publish to Comfy Registry**。完整步骤见 [PUBLISHING.md](PUBLISHING.md)。
+
 ## 许可证
 
 本项目采用 [MIT License](LICENSE) 开源，允许免费使用、复制、修改、分发及商用，分发时须保留原有版权声明和许可声明。软件按现状提供，不附带担保。此许可证适用于本插件代码，模型及其他第三方内容仍遵循各自的许可证。

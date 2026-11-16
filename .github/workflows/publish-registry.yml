@@ -1,0 +1,37 @@
+name: Publish to Comfy Registry
+
+on:
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+concurrency:
+  group: comfy-registry-publish
+  cancel-in-progress: false
+
+jobs:
+  publish:
+    if: github.ref == 'refs/heads/main'
+    runs-on: ubuntu-latest
+    timeout-minutes: 15
+    steps:
+      - name: Check out release files
+        uses: actions/checkout@v4
+        with:
+          persist-credentials: false
+      - name: Check publishing secret
+        shell: bash
+        env:
+          REGISTRY_ACCESS_TOKEN: ${{ secrets.REGISTRY_ACCESS_TOKEN }}
+        run: |
+          if [ -z "$REGISTRY_ACCESS_TOKEN" ]; then
+            echo "::error::Add the Registry API key as the REGISTRY_ACCESS_TOKEN repository secret."
+            exit 1
+          fi
+      - name: Publish node package
+        # Pin the official publishing action to a reviewed revision.
+        uses: Comfy-Org/publish-node-action@d2366e7abb6ab16f3bb03e3520ae25c8cf749bc9
+        with:
+          skip_checkout: 'true'
+          personal_access_token: ${{ secrets.REGISTRY_ACCESS_TOKEN }}

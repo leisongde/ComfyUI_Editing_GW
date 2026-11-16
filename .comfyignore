@@ -1,0 +1,27 @@
+# Keep development material in GitHub but out of Registry packages.
+.github/
+tests/
+DESIGN.md
+CONTRIBUTING.md
+PUBLISHING.md
+requirements-dev.txt
+OPEN_SOURCE_REVIEW.md
+.gitignore
+.gitattributes
+
+# Local files are also excluded by Git; keep these explicit for packaging.
+output/
+__pycache__/
+*.py[cod]
+.env
+.env.*
+*.key
+*.pem
+credentials*.json
+secrets*.json
+.venv/
+venv/
+node_modules/
+.comfyui-test/
+*.log
+*.part

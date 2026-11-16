@@ -1,0 +1,19 @@
+[project]
+name = "editing-gw"
+version = "0.1.0"
+description = "ComfyUI model dependency manifests, selected-model downloads before execution, and ModelScope batch imports."
+readme = "README.md"
+license = { file = "LICENSE" }
+requires-python = ">=3.11"
+authors = [{ name = "leisongde" }]
+# aiohttp and yarl are supplied by the ComfyUI runtime.
+dependencies = []
+
+[project.urls]
+Repository = "https://github.com/leisongde/ComfyUI_Editing_GW"
+Documentation = "https://github.com/leisongde/ComfyUI_Editing_GW#readme"
+"Bug Tracker" = "https://github.com/leisongde/ComfyUI_Editing_GW/issues"
+
+[tool.comfy]
+PublisherId = "leisongde"
+DisplayName = "ComfyUI Editing GW · 模型依赖管理"
